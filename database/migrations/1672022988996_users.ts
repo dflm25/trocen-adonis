@@ -16,6 +16,7 @@ export default class extends BaseSchema {
       table.text('photo')
       table.boolean('is_active').defaultTo(true)
       table.boolean('is_admin').defaultTo(false)
+      table.boolean('is_customer').defaultTo(false)
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */

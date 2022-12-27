@@ -27,7 +27,7 @@ export default class UsersController {
       return response.unauthorized('Error, trying to update user', error)
     }
 
-    return true
+    return user.$isPersisted
   }
 
   public async destroy({ request, response }: HttpContextContract) {

@@ -10,6 +10,7 @@ export default class extends BaseSchema {
       table.integer('branch_id', 11).unsigned().references('id').inTable('branches').nullable()
       table.integer('color_id', 11).unsigned().references('id').inTable('colors').nullable()
       table.integer('sizes_id', 11).unsigned().references('id').inTable('sizes').nullable()
+      table.string('sku').nullable()
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */

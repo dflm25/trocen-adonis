@@ -8,7 +8,9 @@ export default class extends BaseSchema {
       table.increments('id')
       table.uuid('uuid')
       table.string('name')
+      table.string('icon')
       table.string('slug').nullable()
+      table.text('description').nullable()
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */

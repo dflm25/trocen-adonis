@@ -9,7 +9,7 @@ export default class AuthController {
 
     try {
       const token = await auth.use('api').attempt(email, password, {
-        expiresIn: '1 days',
+        expiresIn: '10 days',
       })
       return token
     } catch {

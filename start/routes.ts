@@ -26,13 +26,15 @@ Route.group(() => {
   Route.post('/register', 'AuthController.register')
 }).prefix('/auth')
 
+// Protected routes
+Route.group(() => {
+  Route.resource('users', 'UserController')
+  Route.resource('categories', 'CategoriesController')
+})
+  .middleware('auth')
+  .prefix('api')
+
 // Home route
 Route.get('/', async () => {
   return { hello: 'world' }
 })
-
-/* Route.group(() => {
-  Route.get('users', async () => {
-    return 'handled'
-  }).middleware('can:view_users')
-}).middleware('auth') */

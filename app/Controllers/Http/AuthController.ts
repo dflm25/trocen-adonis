@@ -1,6 +1,7 @@
 // import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 import User from 'App/Models/User'
+import Store from 'App/Models/Store'
 
 export default class AuthController {
   public async login({ auth, request, response }): Promise<string> {
@@ -20,7 +21,14 @@ export default class AuthController {
   public async register({ request, response }): Promise<boolean | object> {
     let user
     try {
-      user = await User.create(request.body())
+      const store = await Store.create(request.only('store_name'))
+
+      let data = {
+        ...request.only(['name', 'username', 'email', 'phone', 'password']),
+        is_admin: 1,
+        store_id: store.id,
+      }
+      user = await User.create(data)
     } catch {
       return response.unauthorized('Error, trying to create user')
     }

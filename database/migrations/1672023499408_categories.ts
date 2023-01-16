@@ -9,7 +9,7 @@ export default class extends BaseSchema {
       table.uuid('uuid')
       table.integer('category_id', 11).unsigned().references('id').inTable('categories').nullable()
       table.string('name')
-      table.string('icon')
+      table.string('icon').nullable()
       table.string('slug').nullable()
       table.text('description').nullable()
       /**

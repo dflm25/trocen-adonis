@@ -17,6 +17,14 @@ export default class extends BaseSeeder {
       { name: '34' },
       { name: '36' },
       { name: '38' },
+      { name: '2' },
+      { name: '4' },
+      { name: '6' },
+      { name: '8' },
+      { name: '10' },
+      { name: '12' },
+      { name: '14' },
+      { name: '16' },
     ])
   }
 }

@@ -8,6 +8,7 @@ export default class extends BaseSchema {
       table.increments('id')
       table.uuid('uuid')
       table.integer('brand_id', 11).unsigned().references('id').inTable('brands').nullable()
+      table.integer('store_id', 11).unsigned().references('id').inTable('stores').nullable()
       table.string('name')
       table.float('price_in', 12, 2)
       table.float('price_out', 12, 2)

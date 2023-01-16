@@ -1,6 +1,4 @@
 // import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import Logger from '@ioc:Adonis/Core/Logger'
-
 import User from 'App/Models/User'
 import Store from 'App/Models/Store'
 

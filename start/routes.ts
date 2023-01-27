@@ -31,6 +31,7 @@ Route.group(() => {
   Route.resource('users', 'UserController')
   Route.resource('categories', 'CategoriesController')
   Route.resource('brands', 'BrandsController')
+  Route.resource('products', 'ProductsController')
 })
   .middleware('auth')
   .prefix('api')

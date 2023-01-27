@@ -50,7 +50,7 @@ export default class BrandsController {
 
       return brand.$isPersisted
     } catch (error) {
-      return response.unauthorized({ message: 'Error, trying to remove catgegory', error })
+      return response.unauthorized({ message: 'Error, trying to remove brand', error })
     }
   }
 }
